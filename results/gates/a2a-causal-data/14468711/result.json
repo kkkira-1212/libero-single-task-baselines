@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "training_updates": 0,
+  "verified_contracts": [],
+  "dataset_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d",
+  "paired_windows_checked": 200,
+  "paired_training_anchors": 6156,
+  "paired_validation_anchors": 1602,
+  "legacy_default_compatibility_passed": true,
+  "scope": "data_only; GPU loss/update/reload gate remains separate",
+  "wall_seconds": 12.861125707626343
+}

@@ -1,0 +1,254 @@
+{
+  "job_id": "14497132",
+  "completed": true,
+  "checkpoint": "/storage/home/hcoda1/5/xwang3405/scratch/robot_manipulation/dp-training/14497127/latest.pt",
+  "checkpoint_sha256": "3cc834a49525a5589537ec60ce5814358ecc1127ce713822fdb163d42a89cf26",
+  "checkpoint_training_step": 3000,
+  "weights": "EMA",
+  "config": {
+    "purpose": "DP_causal_v1_seed1_fixed_budget",
+    "seed": 1,
+    "updates": 3000,
+    "batch_size": 16,
+    "lr": 0.0001,
+    "weight_decay": 1e-06,
+    "grad_clip": 1,
+    "warmup_updates": 100,
+    "pretrained_backbone": false,
+    "inference_steps": 100,
+    "ema_power": 0.75,
+    "checkpoint_interval": 500,
+    "wall_budget_seconds": 6600,
+    "rollout_initial_state_ids": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "rollout_seeds": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "rollout_horizon": 600,
+    "settle_steps": 10,
+    "execution_horizon": 5,
+    "horizon": 16,
+    "n_obs_steps": 2,
+    "n_action_steps": 8,
+    "checkpoint_selection": "final predetermined update, EMA weights; no online selection",
+    "dataset_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d",
+    "sample_contract": "libero-poststep-next-command-v1",
+    "sample_anchor_policy": "has_next_command"
+  },
+  "evaluation_protocol": {
+    "purpose": "prespecified secondary exec1 on corrected DP weights;not checkpoint selection",
+    "execution_horizon": 1
+  },
+  "execution_horizon": 1,
+  "rollouts": [
+    {
+      "initial_state_id": 20,
+      "seed": 20,
+      "steps": 179,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 207.69741344451904
+    },
+    {
+      "initial_state_id": 21,
+      "seed": 21,
+      "steps": 142,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 163.00220227241516
+    },
+    {
+      "initial_state_id": 22,
+      "seed": 22,
+      "steps": 167,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 161.50801014900208
+    },
+    {
+      "initial_state_id": 23,
+      "seed": 23,
+      "steps": 148,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 144.00020170211792
+    },
+    {
+      "initial_state_id": 24,
+      "seed": 24,
+      "steps": 149,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 144.16203689575195
+    },
+    {
+      "initial_state_id": 25,
+      "seed": 25,
+      "steps": 149,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 143.3198847770691
+    },
+    {
+      "initial_state_id": 26,
+      "seed": 26,
+      "steps": 116,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 111.5701265335083
+    },
+    {
+      "initial_state_id": 27,
+      "seed": 27,
+      "steps": 144,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 148.09673476219177
+    },
+    {
+      "initial_state_id": 28,
+      "seed": 28,
+      "steps": 140,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 135.2903425693512
+    },
+    {
+      "initial_state_id": 29,
+      "seed": 29,
+      "steps": 162,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 156.52261352539062
+    },
+    {
+      "initial_state_id": 30,
+      "seed": 30,
+      "steps": 147,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 141.9175636768341
+    },
+    {
+      "initial_state_id": 31,
+      "seed": 31,
+      "steps": 176,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 182.60022616386414
+    },
+    {
+      "initial_state_id": 32,
+      "seed": 32,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 589.5992290973663
+    },
+    {
+      "initial_state_id": 33,
+      "seed": 33,
+      "steps": 144,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 143.6624207496643
+    },
+    {
+      "initial_state_id": 34,
+      "seed": 34,
+      "steps": 160,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 154.0884611606598
+    },
+    {
+      "initial_state_id": 35,
+      "seed": 35,
+      "steps": 163,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 156.68521356582642
+    },
+    {
+      "initial_state_id": 36,
+      "seed": 36,
+      "steps": 145,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 149.24389266967773
+    },
+    {
+      "initial_state_id": 37,
+      "seed": 37,
+      "steps": 152,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 174.61841130256653
+    },
+    {
+      "initial_state_id": 38,
+      "seed": 38,
+      "steps": 143,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 162.3724126815796
+    },
+    {
+      "initial_state_id": 39,
+      "seed": 39,
+      "steps": 171,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 206.1204433441162
+    }
+  ],
+  "gpu": "Tesla V100-PCIE-32GB",
+  "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+  "available_initial_states": 50,
+  "successes": 19,
+  "completed_rollouts": 20,
+  "success_rate": 0.95,
+  "wilson95": [
+    0.763868806553258,
+    0.9911185511992047
+  ]
+}

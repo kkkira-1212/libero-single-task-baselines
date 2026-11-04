@@ -1,0 +1,143 @@
+{
+  "passed": true,
+  "runs": 15,
+  "rollouts": 290,
+  "checks": [
+    {
+      "method": "act",
+      "seed": 0,
+      "condition": "original_zero_warmup",
+      "setting": "execute5",
+      "successes": 17,
+      "rollouts": 20,
+      "passed": true
+    },
+    {
+      "method": "act",
+      "seed": 1,
+      "condition": "original_zero_warmup",
+      "setting": "execute5",
+      "successes": 17,
+      "rollouts": 20,
+      "passed": true
+    },
+    {
+      "method": "dp",
+      "seed": 0,
+      "condition": "original_zero_warmup",
+      "setting": "execute5",
+      "successes": 15,
+      "rollouts": 20,
+      "passed": true
+    },
+    {
+      "method": "dp",
+      "seed": 0,
+      "condition": "original_zero_warmup",
+      "setting": "execute1",
+      "successes": 19,
+      "rollouts": 20,
+      "passed": true
+    },
+    {
+      "method": "dp",
+      "seed": 1,
+      "condition": "original_zero_warmup",
+      "setting": "execute5",
+      "successes": 12,
+      "rollouts": 20,
+      "passed": true
+    },
+    {
+      "method": "dp",
+      "seed": 1,
+      "condition": "original_zero_warmup",
+      "setting": "execute1",
+      "successes": 19,
+      "rollouts": 20,
+      "passed": true
+    },
+    {
+      "method": "baku",
+      "seed": 0,
+      "condition": "original_zero_warmup",
+      "setting": "temporal_aggregation",
+      "successes": 20,
+      "rollouts": 20,
+      "passed": true
+    },
+    {
+      "method": "baku",
+      "seed": 1,
+      "condition": "original_zero_warmup",
+      "setting": "temporal_aggregation",
+      "successes": 6,
+      "rollouts": 20,
+      "passed": true
+    },
+    {
+      "method": "a2a",
+      "seed": 0,
+      "condition": "original_zero_warmup",
+      "setting": "flow6_execute1",
+      "successes": 20,
+      "rollouts": 20,
+      "passed": true
+    },
+    {
+      "method": "a2a",
+      "seed": 1,
+      "condition": "original_zero_warmup",
+      "setting": "flow6_execute1",
+      "successes": 0,
+      "rollouts": 20,
+      "passed": true
+    },
+    {
+      "method": "a2a",
+      "seed": 0,
+      "condition": "diagnostic_open_warmup",
+      "setting": "flow6_execute1",
+      "successes": 20,
+      "rollouts": 20,
+      "passed": true
+    },
+    {
+      "method": "a2a",
+      "seed": 1,
+      "condition": "diagnostic_open_warmup",
+      "setting": "flow6_execute1",
+      "successes": 20,
+      "rollouts": 20,
+      "passed": true
+    },
+    {
+      "method": "a2a",
+      "seed": 0,
+      "condition": "additional_check",
+      "setting": "flow1_execute1",
+      "successes": 19,
+      "rollouts": 20,
+      "passed": true
+    },
+    {
+      "method": "a2a",
+      "seed": 0,
+      "condition": "additional_check",
+      "setting": "newstates_flow6_execute1",
+      "successes": 10,
+      "rollouts": 10,
+      "passed": true
+    },
+    {
+      "method": "a2a",
+      "seed": 0,
+      "condition": "timing_ablation_control",
+      "setting": "legacy_labels_matched_control",
+      "successes": 0,
+      "rollouts": 20,
+      "passed": true
+    }
+  ],
+  "scope": "Exported records/actions/snapshots/media/CSV/file-integrity; no model execution and no checkpoint rehash"
+}

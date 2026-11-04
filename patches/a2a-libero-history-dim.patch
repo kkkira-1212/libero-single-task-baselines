@@ -1,0 +1,16 @@
+diff --git a/roboverse_learn/il/policies/a2a/a2a_policy.py b/roboverse_learn/il/policies/a2a/a2a_policy.py
+index 68014b2..2b109ef 100644
+--- a/roboverse_learn/il/policies/a2a/a2a_policy.py
++++ b/roboverse_learn/il/policies/a2a/a2a_policy.py
+@@ -97,9 +97,10 @@ class A2AImagePolicy(BaseImagePolicy):
+         
+         # History state encoder
+         # Note: n_obs_steps must be >= 8 for CNN with 3 layers (stride=2 each)
++        history_state_dim = shape_meta["obs"]["agent_pos"]["shape"][0]
+         self.history_action_encoder = CNNActionEncoder(
+             pred_horizon=n_obs_steps,  # History length
+-            action_dim=action_dim,
++            action_dim=history_state_dim,
+             latent_dim=latent_dim,
+             hidden_dim=action_ae.net.enc_hidden_dim,
+         )

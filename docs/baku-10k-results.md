@@ -1,0 +1,15 @@
+# BAKU10k single-task candidate
+
+### 2026-10-25 — BAKU10k19/20;parallelvalidationandA2Apreparation
+- Train14390364 COMPLETED0:0 in17m04s,10000updates;eval14390365 COMPLETED0:0 in17m29s:19/20=95%,Wilson95%76.39–99.11%. OnlyID20failedat600steps;19successesat133–194steps.20GIFs/actionfilesverified.
+- Original3k0/20preserved. Longerbudgetstronglyimprovedthisrun;freshstochasticrerun,notexactdeterministiccontinuation,soavoidclaiminguniquerootcauseproved. Val32sampleloss.321449vsoriginal3k.368096againweaklyranksonlinebehavior.
+- User requestedfasteroverallpace. BundledremainingBAKUchecks:seed1train14404804(10000updates,onlyseedchanged),afterok20trialeval14404805,andfrozenseed0confirm14404806onnewBAKUevalIDs40..49/seeds40..49. Each1GPU/4CPU/24GB/max2h,RTX6000,explicitfreeembers,emails;noneotheruserjobsmodified.
+- Frozencheckpoint scratch/robot_manipulation/frozen/baku_seed0_step10000/checkpoint.pt chmod0444,SHA2566324176ced76a9931a4199dd988a743d682d26f8180663e9c4c71a34ff5f8dac. NewconfirmationprotocolnarrowoverrideIDs/seedswithhashguard;trainingconfigmatch/10000step/sourcechecksretained. Original20trialsdevelopment,10newIDsnotprovenoutside50demostartstates.
+- Added --checkpoint/--eval-protocol options toBAKUrunner. AST/bashsyntax,seed-onlyconfigdiff,newIDdisjointness/staticguardchecks passed;newconfirmationpathruntimepending. Defaultevalbehaviorretained.
+- A2Acoreaudit:sourcepolicyimportsTorch/vision/normalizer/torchcfm,nodirectIsaacimportobservedininspectedcore;fulltransitivedependencyimportunverified. Authorbaseconfiguses6samplingsteps,notautomatically1.
+- Implemented minimalA2Ahistoryencoderinputdimfromshape_meta.obs.agent_pos(9),keepingfutureencoder/decoderactiondim7. Savedpatches/a2a-libero-history-dim.patch;AST/actiondimstaticcheckspassed,noA2Amodel/runtimeexperimentyet. Sharedhistory8/horizon16adapteralreadyavailable.
+- Fasterworkflow:batchdependencies+realbatchloss/update+checkpoint+livecheckpermethod;parallelizeindependentseed/confirmation;freezeconfigs/budgetbeforelaunch;avoidrepeatedone-steppermissionroundtrips. Keepfailureevidenceandteachfromrealcode.
+
+### 2026-10-25 — BAKU seed instability recorded; A2A integration queued
+- BAKUseed1train14404804 COMPLETED0:0 in17m20s;eval14404805 COMPLETED0:0 in20m33s:1/20=5%,all20trials/videoscomplete. Seed0same10krecipe19/20=95%;trainingseedstabilityproblemremainsOPEN. Do not report95%asmethod-levelrobustperformance orhide1/20.
+- Frozenseed0confirm14404806 COMPLETED0:0 in7m59s:9/10=90%,all10newBAKUevalIDs40..49completed/GIFsverified. This supportsfrozenseed0candidateonnewstates,notrobustnessacrossseeds;newIDsnotprovenoutsidealltrainingdemoinitstates.

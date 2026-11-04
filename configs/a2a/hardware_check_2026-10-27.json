@@ -1,0 +1,36 @@
+{
+  "purpose": "Separate frozen inference hardware effect from checkpoint-quality difference;training seed and training hardware remain confounded",
+  "cases": {
+    "seed0_v100": {
+      "job_id": "14498425",
+      "frozen_manifest": "configs/a2a/frozen_causal_seed0_10000.json",
+      "partition": "gpu-v100",
+      "reference_evaluation_job": "14468640",
+      "expected_gpu_token": "V100"
+    },
+    "seed1_rtx6000": {
+      "job_id": "14503459",
+      "frozen_manifest": "configs/a2a/frozen_causal_seed1_10000.json",
+      "partition": "gpu-rtx6000",
+      "reference_evaluation_job": "14495969",
+      "expected_gpu_token": "RTX6000",
+      "required_gres": "gpu:rtx_6000:1",
+      "required_constraint": "RTX6000"
+    }
+  },
+  "collector_job": "14503460",
+  "previous_attempts": [
+    {
+      "job_id": "14498426",
+      "frozen_manifest": "configs/a2a/frozen_causal_seed1_10000.json",
+      "partition": "gpu-rtx6000",
+      "reference_evaluation_job": "14495969",
+      "actual_gpu": "Tesla V100-PCIE-16GB",
+      "actual_partition": "gpu-v100",
+      "target_hardware_satisfied": false,
+      "successes": 0,
+      "completed_rollouts": 20
+    }
+  ],
+  "previous_collector_job": "14498449"
+}

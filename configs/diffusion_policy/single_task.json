@@ -1,0 +1,46 @@
+{
+  "status": "integration_passed_first_training_pilot_submitted",
+  "source": "third_party/DiffusionPolicy",
+  "commit": "5ba07ac6661db573af695b419a7947ecb704690f",
+  "policy_class": "diffusion_policy.policy.diffusion_unet_image_policy.DiffusionUnetImagePolicy",
+  "shape_meta": {
+    "action": {
+      "shape": [
+        7
+      ]
+    },
+    "obs": {
+      "agentview": {
+        "shape": [
+          3,
+          128,
+          128
+        ],
+        "type": "rgb"
+      },
+      "wrist": {
+        "shape": [
+          3,
+          128,
+          128
+        ],
+        "type": "rgb"
+      },
+      "agent_pos": {
+        "shape": [
+          9
+        ],
+        "type": "low_dim"
+      }
+    }
+  },
+  "horizon": 16,
+  "n_obs_steps": 2,
+  "n_action_steps": 8,
+  "split": "configs/act/split.json",
+  "normalizer_scope": "official LinearNormalizer limits, fitted on the fixed40 training episodes only",
+  "image_input": "raw OpenGL orientation float in [0,1]; model owns ImageNet normalization",
+  "padding": "repeat boundary samples within same episode, as official diffusion sequence convention",
+  "evaluation": "reuse task, fixed initial states and 600-step cap; method-specific action execution documented",
+  "environment": "isolated dp-env; integration14340945 passed; full upstream conda recipe not used"
+}

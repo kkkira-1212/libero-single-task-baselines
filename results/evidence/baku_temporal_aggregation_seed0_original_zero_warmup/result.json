@@ -1,0 +1,296 @@
+{
+  "completed": true,
+  "job_id": "14497139",
+  "checkpoint": "/storage/home/hcoda1/5/xwang3405/scratch/robot_manipulation/baku-training/14497138/latest.pt",
+  "checkpoint_sha256": "dfa4fa99763692c0f830ef44be71f7c035c70fa8757607df487d0df2883e2263",
+  "checkpoint_training_step": 10000,
+  "config": {
+    "purpose": "BAKU_causal_v1_seed0_fixed_budget",
+    "seed": 0,
+    "updates": 10000,
+    "batch_size": 16,
+    "checkpoint_interval": 500,
+    "wall_budget_seconds": 6600,
+    "model_config": {
+      "obs_shape": {
+        "pixels": [
+          3,
+          128,
+          128
+        ],
+        "pixels_egocentric": [
+          3,
+          128,
+          128
+        ],
+        "proprioceptive": [
+          9
+        ]
+      },
+      "action_shape": [
+        7
+      ],
+      "device": "cuda",
+      "lr": 0.0001,
+      "hidden_dim": 256,
+      "stddev_schedule": 0.1,
+      "stddev_clip": 0.3,
+      "use_tb": true,
+      "augment": true,
+      "obs_type": "pixels",
+      "encoder_type": "resnet",
+      "policy_type": "gpt",
+      "policy_head": "deterministic",
+      "pixel_keys": [
+        "pixels",
+        "pixels_egocentric"
+      ],
+      "proprio_key": "proprioceptive",
+      "feature_key": "features",
+      "use_proprio": true,
+      "train_encoder": true,
+      "norm": false,
+      "history": false,
+      "history_len": 10,
+      "eval_history_len": 5,
+      "separate_encoders": false,
+      "temporal_agg": true,
+      "max_episode_len": 600,
+      "num_queries": 10,
+      "prompt": "text",
+      "use_language": true,
+      "film": true
+    },
+    "data_root": "/storage/home/hcoda1/5/xwang3405/scratch/robot_manipulation/baku-data/14354211",
+    "dataset_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d",
+    "pkl_sha256": {
+      "train": "69fb83c2df6bb144bb039ff557ada72c8b4d1816f296e334569b79d9b3227af2",
+      "validation": "b50daba905f9a26dd5acca725f8ceda801e1b4329d18a239f4305cfc4265c959"
+    },
+    "initial_state_ids": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "rollout_seeds": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "rollout_horizon": 600,
+    "settle_steps": 10,
+    "checkpoint_selection": "final predetermined10000updates;no validation/online checkpoint selection",
+    "scope": "small single-task adaptation,not original paper training recipe",
+    "normalization": "official LIBERO nearidentity stats;images flipped once;model ToTensor",
+    "sampling": "official BCDataset uniformepisode then validwindow;notDP timestepuniformsampling",
+    "sample_contract": "libero-poststep-next-command-v1",
+    "sample_anchor_policy": "has_next_command"
+  },
+  "evaluation_protocol": {},
+  "rollouts": [
+    {
+      "initial_state_id": 20,
+      "seed": 20,
+      "steps": 140,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 6.903806924819946
+    },
+    {
+      "initial_state_id": 21,
+      "seed": 21,
+      "steps": 134,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 4.123486280441284
+    },
+    {
+      "initial_state_id": 22,
+      "seed": 22,
+      "steps": 135,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 3.924104690551758
+    },
+    {
+      "initial_state_id": 23,
+      "seed": 23,
+      "steps": 136,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 4.034717798233032
+    },
+    {
+      "initial_state_id": 24,
+      "seed": 24,
+      "steps": 143,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 4.321842432022095
+    },
+    {
+      "initial_state_id": 25,
+      "seed": 25,
+      "steps": 134,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 3.874936580657959
+    },
+    {
+      "initial_state_id": 26,
+      "seed": 26,
+      "steps": 135,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 4.09049129486084
+    },
+    {
+      "initial_state_id": 27,
+      "seed": 27,
+      "steps": 140,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 4.070065021514893
+    },
+    {
+      "initial_state_id": 28,
+      "seed": 28,
+      "steps": 139,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 4.305863618850708
+    },
+    {
+      "initial_state_id": 29,
+      "seed": 29,
+      "steps": 130,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 3.897928476333618
+    },
+    {
+      "initial_state_id": 30,
+      "seed": 30,
+      "steps": 138,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 3.9722235202789307
+    },
+    {
+      "initial_state_id": 31,
+      "seed": 31,
+      "steps": 127,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 3.9484241008758545
+    },
+    {
+      "initial_state_id": 32,
+      "seed": 32,
+      "steps": 136,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 4.0632054805755615
+    },
+    {
+      "initial_state_id": 33,
+      "seed": 33,
+      "steps": 133,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 3.9645755290985107
+    },
+    {
+      "initial_state_id": 34,
+      "seed": 34,
+      "steps": 132,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 3.979463815689087
+    },
+    {
+      "initial_state_id": 35,
+      "seed": 35,
+      "steps": 137,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 4.057113885879517
+    },
+    {
+      "initial_state_id": 36,
+      "seed": 36,
+      "steps": 139,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 4.070011377334595
+    },
+    {
+      "initial_state_id": 37,
+      "seed": 37,
+      "steps": 136,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 4.0307135581970215
+    },
+    {
+      "initial_state_id": 38,
+      "seed": 38,
+      "steps": 132,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 4.079766511917114
+    },
+    {
+      "initial_state_id": 39,
+      "seed": 39,
+      "steps": 132,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 3.934135675430298
+    }
+  ],
+  "training_updates_this_run": 0,
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "available_initial_states": 50,
+  "successes": 20,
+  "completed_rollouts": 20,
+  "success_rate": 1.0,
+  "wilson95": [
+    0.8388748419471806,
+    1.0
+  ]
+}

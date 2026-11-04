@@ -1,0 +1,20 @@
+{
+  "purpose": "interface_validation_not_final_training_recipe",
+  "state_dim": 9,
+  "state_fields": ["joint_states", "gripper_states"],
+  "action_dim": 7,
+  "action_semantics": "LIBERO OSC_POSE delta pose plus gripper",
+  "camera_order": ["agentview_rgb", "eye_in_hand_rgb"],
+  "image_shape": [128, 128, 3],
+  "image_convention": "raw stored OpenGL orientation, same as raw environment observations",
+  "image_normalization": "uint8/255 then ImageNet mean/std exactly once",
+  "chunk_size": 20,
+  "chunk_note": "one nominal second at 20 Hz; initial interface setting, not tuned",
+  "split": "configs/act/split.json",
+  "normalization": "configs/act/normalization.json",
+  "action_time_alignment": "current observation t -> actions[t:t+chunk_size]",
+  "padding": "normalized-space zeros after episode end, is_pad=true",
+  "loss": "author padded-mean masked L1 + 10*KL",
+  "pretrained_backbone": false,
+  "pretrained_note": "disabled for structure checks; final training decision pending"
+}

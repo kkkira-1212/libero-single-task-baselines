@@ -1,0 +1,17 @@
+{
+  "status": "official_LIBERO_path_audited_runtime_unverified",
+  "source": "third_party/BAKU",
+  "commit": "47e367059191de30ac4b6353ff5615fdef11d8c5",
+  "training_entry": "baku/train.py",
+  "suite": "libero_object",
+  "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+  "pixel_keys": ["pixels", "pixels_egocentric"],
+  "state": "joint_states(7)+gripper_states(2)",
+  "action_dim": 7,
+  "split": "configs/act/split.json",
+  "image_convention": "vertical flip for both stored and raw online images, matching BAKU suite wrapper",
+  "conversion": "export only selected demos; do not use upstream rerender pre-action states without reconciling timing",
+  "language_encoder": "sentence-transformers/all-MiniLM-L6-v2; weights/dependency not installed",
+  "environment": "isolated; upstream Python3.9/Hydra1.1/einops0.7 differs from current environment",
+  "normalization": "retain/report official method-specific preprocessing or explicitly adapt using training data only"
+}

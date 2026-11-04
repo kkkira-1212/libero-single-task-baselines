@@ -1,0 +1,257 @@
+{
+  "job_id": "14497121",
+  "host": "atl1-1-01-002-28-0.pace.gatech.edu",
+  "execution_ok": true,
+  "training_updates_this_run": 0,
+  "rollouts": [
+    {
+      "initial_state_id": 20,
+      "seed": 20,
+      "steps": 138,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 14.78148865699768
+    },
+    {
+      "initial_state_id": 21,
+      "seed": 21,
+      "steps": 134,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 3.056950092315674
+    },
+    {
+      "initial_state_id": 22,
+      "seed": 22,
+      "steps": 129,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 2.9062821865081787
+    },
+    {
+      "initial_state_id": 23,
+      "seed": 23,
+      "steps": 164,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 3.5873665809631348
+    },
+    {
+      "initial_state_id": 24,
+      "seed": 24,
+      "steps": 140,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 3.1491527557373047
+    },
+    {
+      "initial_state_id": 25,
+      "seed": 25,
+      "steps": 135,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 3.1139183044433594
+    },
+    {
+      "initial_state_id": 26,
+      "seed": 26,
+      "steps": 114,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 2.6830358505249023
+    },
+    {
+      "initial_state_id": 27,
+      "seed": 27,
+      "steps": 144,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 3.083862781524658
+    },
+    {
+      "initial_state_id": 28,
+      "seed": 28,
+      "steps": 132,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 3.035747766494751
+    },
+    {
+      "initial_state_id": 29,
+      "seed": 29,
+      "steps": 121,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 2.8059821128845215
+    },
+    {
+      "initial_state_id": 30,
+      "seed": 30,
+      "steps": 133,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 3.2928736209869385
+    },
+    {
+      "initial_state_id": 31,
+      "seed": 31,
+      "steps": 120,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 2.750537633895874
+    },
+    {
+      "initial_state_id": 32,
+      "seed": 32,
+      "steps": 131,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 2.8240413665771484
+    },
+    {
+      "initial_state_id": 33,
+      "seed": 33,
+      "steps": 129,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 3.1623620986938477
+    },
+    {
+      "initial_state_id": 34,
+      "seed": 34,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 12.462507009506226
+    },
+    {
+      "initial_state_id": 35,
+      "seed": 35,
+      "steps": 144,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 3.3360908031463623
+    },
+    {
+      "initial_state_id": 36,
+      "seed": 36,
+      "steps": 120,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 2.893437385559082
+    },
+    {
+      "initial_state_id": 37,
+      "seed": 37,
+      "steps": 128,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 2.9077227115631104
+    },
+    {
+      "initial_state_id": 38,
+      "seed": 38,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 12.631938457489014
+    },
+    {
+      "initial_state_id": 39,
+      "seed": 39,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 13.914041996002197
+    }
+  ],
+  "purpose": "ACT_causal_v1_seed1_fixed_budget",
+  "checkpoint": "/storage/home/hcoda1/5/xwang3405/scratch/robot_manipulation/act-pilot/14497120/latest.pt",
+  "timings": {
+    "policy_ready_seconds": 119.36104226112366
+  },
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "torch": "1.11.0+cu113",
+  "checkpoint_selection": "specified checkpoint",
+  "config": {
+    "purpose": "ACT_causal_v1_seed1_fixed_budget",
+    "seed": 1,
+    "updates": 10000,
+    "batch_size": 16,
+    "lr": 1e-05,
+    "backbone_lr": 1e-05,
+    "kl_weight": 10.0,
+    "grad_clip": 1.0,
+    "checkpoint_interval": 500,
+    "validation_samples_per_demo": 16,
+    "pretrained_backbone": true,
+    "chunk_size": 20,
+    "execution_horizon": 5,
+    "temporal_ensemble": false,
+    "rollout_initial_state_ids": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "rollout_seeds": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "rollout_horizon": 600,
+    "settle_steps": 10,
+    "wall_budget_before_final_checkpoint_seconds": 6600,
+    "training_only": true,
+    "verify_resume": false,
+    "sample_contract": "libero-poststep-next-command-v1",
+    "sample_anchor_policy": "has_next_command",
+    "dataset_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d",
+    "checkpoint_selection": "final10000updates;never best validation checkpoint"
+  },
+  "checkpoint_training_step": 10000,
+  "available_initial_states": 50,
+  "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+  "successes": 17,
+  "completed_rollouts": 20,
+  "success_rate": 0.85,
+  "wilson95": [
+    0.6395811352592431,
+    0.9476312541037835
+  ],
+  "note": "Single-task, single-training-seed evaluation; incomplete trials are not counted as completed.",
+  "wall_seconds": 359.1493184566498
+}

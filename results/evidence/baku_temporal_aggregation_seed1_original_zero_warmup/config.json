@@ -1,0 +1,116 @@
+{
+  "purpose": "BAKU_causal_v1_seed1_fixed_budget",
+  "seed": 1,
+  "updates": 10000,
+  "batch_size": 16,
+  "checkpoint_interval": 500,
+  "wall_budget_seconds": 6600,
+  "model_config": {
+    "obs_shape": {
+      "pixels": [
+        3,
+        128,
+        128
+      ],
+      "pixels_egocentric": [
+        3,
+        128,
+        128
+      ],
+      "proprioceptive": [
+        9
+      ]
+    },
+    "action_shape": [
+      7
+    ],
+    "device": "cuda",
+    "lr": 0.0001,
+    "hidden_dim": 256,
+    "stddev_schedule": 0.1,
+    "stddev_clip": 0.3,
+    "use_tb": true,
+    "augment": true,
+    "obs_type": "pixels",
+    "encoder_type": "resnet",
+    "policy_type": "gpt",
+    "policy_head": "deterministic",
+    "pixel_keys": [
+      "pixels",
+      "pixels_egocentric"
+    ],
+    "proprio_key": "proprioceptive",
+    "feature_key": "features",
+    "use_proprio": true,
+    "train_encoder": true,
+    "norm": false,
+    "history": false,
+    "history_len": 10,
+    "eval_history_len": 5,
+    "separate_encoders": false,
+    "temporal_agg": true,
+    "max_episode_len": 600,
+    "num_queries": 10,
+    "prompt": "text",
+    "use_language": true,
+    "film": true
+  },
+  "data_root": "/storage/home/hcoda1/5/xwang3405/scratch/robot_manipulation/baku-data/14354211",
+  "dataset_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d",
+  "pkl_sha256": {
+    "train": "69fb83c2df6bb144bb039ff557ada72c8b4d1816f296e334569b79d9b3227af2",
+    "validation": "b50daba905f9a26dd5acca725f8ceda801e1b4329d18a239f4305cfc4265c959"
+  },
+  "initial_state_ids": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "rollout_seeds": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "rollout_horizon": 600,
+  "settle_steps": 10,
+  "checkpoint_selection": "final predetermined10000updates;no validation/online checkpoint selection",
+  "scope": "small single-task adaptation,not original paper training recipe",
+  "normalization": "official LIBERO nearidentity stats;images flipped once;model ToTensor",
+  "sampling": "official BCDataset uniformepisode then validwindow;notDP timestepuniformsampling",
+  "sample_contract": "libero-poststep-next-command-v1",
+  "sample_anchor_policy": "has_next_command"
+}

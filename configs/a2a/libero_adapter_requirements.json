@@ -1,0 +1,18 @@
+{
+  "status": "policy_history_dim_adapter_prepared_AST_only_runtime_unverified",
+  "source": "third_party/A2A",
+  "commit": "a5792ecf4e7f8fa4d85fe66ea9a50618138f925c",
+  "policy": "roboverse_learn.il.policies.a2a.a2a_policy.A2AImagePolicy",
+  "state_dim": 9,
+  "action_dim": 7,
+  "n_obs_steps": 8,
+  "n_action_steps": 8,
+  "horizon": 16,
+  "critical_change": "history encoder input inferred from agent_pos shape (9);future action encoder/decoder remain7;patch saved",
+  "history_padding": "repeat initial observation, never cross episode boundaries",
+  "environment_strategy": "use LIBERO/MuJoCo for collection/evaluation; audit policy imports before deciding whether RoboVerse/Isaac is needed",
+  "normalization": "separate agent_pos and action train-only normalizers",
+  "claims": "No LIBERO success rate or inference latency established",
+  "sampling_note": "author base config uses6flowsteps;single-step must be explicitlyconfigured/tested,not assumed",
+  "dependency_audit": "policy core inspected:torch,torchvision,zarr,torchcfm;no direct Isaac imports observed in inspected policy/core files;full transitive import unverified"
+}

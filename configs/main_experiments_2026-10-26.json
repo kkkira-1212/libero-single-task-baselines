@@ -1,0 +1,190 @@
+{
+  "scope": "single_LIBERO_Object_task;two_seed_comparisons;prespecified1vs6flowsteps;notfullsuite",
+  "runs": [
+    {
+      "method": "ACT",
+      "protocol": "chunk20/exec5",
+      "seed": 0,
+      "updates": 10000,
+      "batch_size": 16,
+      "job": "14297140",
+      "report": "artifacts/act-eval/14297140/result.json",
+      "role": "comparison"
+    },
+    {
+      "method": "ACT",
+      "protocol": "chunk20/exec5",
+      "seed": 1,
+      "updates": 10000,
+      "batch_size": 16,
+      "job": "14339489",
+      "report": "artifacts/act-eval/14339489/result.json",
+      "role": "comparison"
+    },
+    {
+      "method": "DP",
+      "protocol": "DDPM100/exec5",
+      "seed": 0,
+      "updates": 3000,
+      "batch_size": 16,
+      "job": "14353583",
+      "report": "artifacts/dp-eval/14353583/result.json",
+      "role": "comparison"
+    },
+    {
+      "method": "DP",
+      "protocol": "DDPM100/exec5",
+      "seed": 1,
+      "updates": 3000,
+      "batch_size": 16,
+      "job": "14353585",
+      "report": "artifacts/dp-eval/14353585/result.json",
+      "role": "comparison"
+    },
+    {
+      "method": "DP",
+      "protocol": "DDPM100/exec1",
+      "seed": 0,
+      "updates": 3000,
+      "batch_size": 16,
+      "job": "14353581",
+      "report": "artifacts/dp-eval/14353581/result.json",
+      "role": "comparison"
+    },
+    {
+      "method": "DP",
+      "protocol": "DDPM100/exec1",
+      "seed": 1,
+      "updates": 3000,
+      "batch_size": 16,
+      "job": "14467232",
+      "report": "artifacts/dp-eval/14467232/result.json",
+      "role": "comparison",
+      "resume_parent_job": "14463330"
+    },
+    {
+      "method": "BAKU",
+      "protocol": "chunk10/temporalagg",
+      "seed": 0,
+      "updates": 10000,
+      "batch_size": 16,
+      "job": "14390365",
+      "report": "artifacts/baku-eval/14390365/result.json",
+      "role": "comparison"
+    },
+    {
+      "method": "BAKU",
+      "protocol": "chunk10/temporalagg",
+      "seed": 1,
+      "updates": 10000,
+      "batch_size": 16,
+      "job": "14404805",
+      "report": "artifacts/baku-eval/14404805/result.json",
+      "role": "comparison"
+    },
+    {
+      "method": "A2A",
+      "protocol": "flow6/exec1",
+      "seed": 0,
+      "updates": 40000,
+      "batch_size": 4,
+      "job": "14466095",
+      "report": "artifacts/a2a-eval/14466095/result.json",
+      "role": "comparison",
+      "resume_parent_job": "14463325"
+    },
+    {
+      "method": "A2A",
+      "protocol": "flow6/exec1",
+      "seed": 1,
+      "updates": 40000,
+      "batch_size": 4,
+      "job": "14464192",
+      "report": "artifacts/a2a-eval/14464192/result.json",
+      "role": "comparison"
+    },
+    {
+      "method": "A2A",
+      "protocol": "flow1/exec1",
+      "seed": 0,
+      "updates": 40000,
+      "batch_size": 4,
+      "job": "14466096",
+      "report": "artifacts/a2a-eval/14466096/result.json",
+      "role": "comparison",
+      "resume_parent_job": "14463326"
+    },
+    {
+      "method": "A2A",
+      "protocol": "flow1/exec1",
+      "seed": 1,
+      "updates": 40000,
+      "batch_size": 4,
+      "job": "14464193",
+      "report": "artifacts/a2a-eval/14464193/result.json",
+      "role": "comparison"
+    },
+    {
+      "method": "A2A",
+      "protocol": "flow6/10k_pilot",
+      "seed": 0,
+      "updates": 10000,
+      "batch_size": 4,
+      "job": "14447501",
+      "report": "artifacts/a2a-eval/14447501/result.json",
+      "role": "earlier_pilot"
+    },
+    {
+      "method": "A2A",
+      "protocol": "flow1/10k_pilot",
+      "seed": 0,
+      "updates": 10000,
+      "batch_size": 4,
+      "job": "14447502",
+      "report": "artifacts/a2a-eval/14447502/result.json",
+      "role": "earlier_pilot"
+    },
+    {
+      "method": "BAKU",
+      "protocol": "3k_pilot",
+      "seed": 0,
+      "updates": 3000,
+      "batch_size": 16,
+      "job": "14386820",
+      "report": "artifacts/baku-eval/14386820/result.json",
+      "role": "earlier_pilot"
+    },
+    {
+      "method": "BAKU",
+      "protocol": "frozen/newIDs40..49",
+      "seed": 0,
+      "updates": 10000,
+      "batch_size": 16,
+      "job": "14404806",
+      "report": "artifacts/baku-eval/14404806/result.json",
+      "role": "confirmation"
+    },
+    {
+      "method": "A2A",
+      "protocol": "40k_seed1_hardware_failed_attempt",
+      "seed": 1,
+      "updates": 40000,
+      "batch_size": 4,
+      "job": "14463327",
+      "report": "artifacts/a2a-train/14463327/result.json",
+      "role": "failed_attempt",
+      "failure_reason": "uncorrectableECCbeforeupdates;nodeatl1-1-01-002-4-0"
+    }
+  ],
+  "new_training_jobs": [
+    "14463324",
+    "14464191"
+  ],
+  "pending_evaluation_jobs": [
+    "14466095",
+    "14466096",
+    "14464192",
+    "14464193",
+    "14467232"
+  ]
+}

@@ -1,0 +1,20 @@
+# BAKU first-pilot diagnosis
+
+### BAKU failure investigation started — frozen-policy diagnosis
+- User authorized investigating0/20pilot. Reviewed sampled frames fromIDs20,21,25,38;savedartifacts/baku-eval/14386820/diagnostic_frames.png. Allfourapproachobjectregion thenprolongedineffectivemotion/driftwithoutconfirmedcompletion;not evidence for a single precise gripper/contact/rootcause.
+- Static code audit:trainupdateandactbothuseprojectedlanguage/proprio+samecameraencoder;historyfalsebecomes1inboth;offlineflip/liveflip alreadyverified;checkpointreloadpreviouslypassed. These checks narrowpossibilities,not proof trained-policy inputs areidentical.
+- Submitted frozen diagnostic14388047,1GPU/4CPU/24GB/max30min,explicitfreeembers,knownECCnodeexcluded,emailsenabled. No parameterupdates or trainingrecipechanges.
+- Compareteacherforcedpredictions on32fixedsamplesfrom4traindemosand32from4validationdemos:perdimensionMSE,firstactionRMSE,grippersignagreement,selectedpred/targetrecords. Limiteddiagnosticsamples,notfullsplit performance.
+- Samephysicalstoredobservation entersofficialupdate(update=False) andact;capturepreaggregationraw10stepchunks usingforwardhook to measureinput-pathpredictionparity.
+- Shortprobe2initIDs20/38x2conditions,180steps:officialtemporalaggregationvsfreshchunkfirstaction everyreplan. Originalmodel/sourceunchanged;hookonlyselectsdiagnosticaction. Thisis4shortdiagnosticrollouts,not20trialsuccessbenchmark or adaptationvalidated.
+- Hypotheses remain learningerror/closedloopdistributiondrift vs onlinepathissue vs aggregation effects;no causalconclusion yet. Lossdecreasealonecannotresolve.
+- Evidence expectedlogs/baku-diagnosis-14388047.log,artifacts/baku-diagnosis/14388047/result.json plus4GIFs/actionlogs. AST/bashsyntaxpassed;runtimeunverified.
+
+### Frozen BAKU diagnosis completed — no tested input-path discrepancy
+-14388047 COMPLETED0:0 in11m15s,0trainingupdates,4shortrolloutGIFsverified.
+- Ononefixedtrainobservation andonefixedvalidationobservation,officialupdate(update=False)vsactraw10stepchunks andfirstexecutedactionmaxdifference0.0. No observedinputpathmismatch onthese2checks;notuniversalproof ofinterfacecorrectness.
+- Teacherforcing32windowsfrom4trainepisodes:firstactionRMSE0.130393;32windowsfrom4validationepisodes:0.141389,inrawnearidentityactionunits,NOTmeters/radians. Grippersignagreement across320chunkpositions98.44%train/97.81%validation,doesnotprovecontact/graspquality.
+- Exampledemo28t0:ycommandprediction-0.244118vstarget-0.723207;substantialresidualmotorpredictionerror alreadyontrainingdata. SampledtranslationMSEtrain(.01964,.01339,.02665),val(.01902,.01799,.03574).
+- Twostates20/38,180stepdiagnosticwithofficialaggregationvsfreshchunkfirstaction:all4failed. Removingaggregationalone didnotrescueeitherwithin180steps;cannotruleoutaggregationeffects overfull600steps/otherstates.
+- Evidence favorsinaccuratelearnedactions/closedloopdrift asnextworkinghypothesisoveratesteddouble-normalization/loadmismatch. Undertrainingafter3000updatesisplausible,notestablished;similarlimitedtrain/valerrorsdonotbythemselvesprovegeneralizationorunderfitting.
+- Nextcontrolledcandidate:preserve3000result,andextendupdatebudgetwithotherrecipefixed,thenrepeat20trialprotocol;ifstillineffective,considerfocusedtiny-overfit/phase-leveldiagnosticsratherthanunboundedseeds. No newtrainingjobs submitted inthisreview.

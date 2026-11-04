@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "method": "act",
+  "training_updates": 1,
+  "data_only": false,
+  "raw_data_windows_checked": 200,
+  "eligible_training_anchors": 6156,
+  "loss": 78.69161987304688,
+  "reload_max_abs": 0.0,
+  "actual_encoder_target_verified": true,
+  "source_sha256": {
+    "adapters/libero_act.py": "37d12f11ccad36855e6b636f98b2aae3a48277ef00daf08beed78eb54e279ecf",
+    "adapters/act_model.py": "1b97e8b65b0d4fd6d7f744ac105c78d65474b3a8bc55c744fe4dae8ba9bc5749",
+    "experiments/act_pilot.py": "03e8b2920f8b78fbde48737903f9fdadef5b0c3a8efc18e4ff5e5e42f126ef2f",
+    "experiments/act_eval.py": "21f1f2b4535c4dde8ace2907547411c66d8b9ed766c427b8cb016a574e1205b9",
+    "adapters/libero_causal_contract.py": "e646a7e7cb29d89f6203c210a9c7e6ccf7c57a938943e70e690acbe5bb339d71",
+    "adapters/baseline_causal_runtime.py": "9d7079f5422f40187413b6047275646d3f5fb5ada90158d8da4eb73dda7685d6",
+    "scripts/check_baseline_causal.py": "b0d06db329ea18c27b7cc1121aa1690538ca10ed1fac5d73569313e1959cdd97",
+    "scripts/activate-causal-baseline.sh": "3c14caac9b4bb63fd2710702a21c8e447e448581945d7991078141839fa46e58"
+  },
+  "scope": "real-data CUDA update, prediction and strict reload; not policy success",
+  "gpu": "Tesla V100-PCIE-16GB",
+  "wall_seconds": 140.65847086906433
+}

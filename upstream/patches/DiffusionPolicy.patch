@@ -1,0 +1,67 @@
+diff --git a/diffusion_policy/model/common/dict_of_tensor_mixin.py b/diffusion_policy/model/common/dict_of_tensor_mixin.py
+index 9d08bc1..f8bb988 100644
+--- a/diffusion_policy/model/common/dict_of_tensor_mixin.py
++++ b/diffusion_policy/model/common/dict_of_tensor_mixin.py
+@@ -1,3 +1,4 @@
++from diffusion_policy.model.common.parameter_dict_compat import TensorParameterDict
+ import torch
+ import torch.nn as nn
+ 
+@@ -5,7 +6,7 @@ class DictOfTensorMixin(nn.Module):
+     def __init__(self, params_dict=None):
+         super().__init__()
+         if params_dict is None:
+-            params_dict = nn.ParameterDict()
++            params_dict = TensorParameterDict()
+         self.params_dict = params_dict
+ 
+     @property
+@@ -19,11 +20,11 @@ class DictOfTensorMixin(nn.Module):
+                 return
+ 
+             if keys[0] not in dest:
+-                dest[keys[0]] = nn.ParameterDict()
++                dest[keys[0]] = TensorParameterDict()
+             dfs_add(dest[keys[0]], keys[1:], value)
+ 
+         def load_dict(state_dict, prefix):
+-            out_dict = nn.ParameterDict()
++            out_dict = TensorParameterDict()
+             for key, value in state_dict.items():
+                 value: torch.Tensor
+                 if key.startswith(prefix):
+diff --git a/diffusion_policy/model/common/normalizer.py b/diffusion_policy/model/common/normalizer.py
+index a264692..b32fe96 100644
+--- a/diffusion_policy/model/common/normalizer.py
++++ b/diffusion_policy/model/common/normalizer.py
+@@ -1,3 +1,4 @@
++from diffusion_policy.model.common.parameter_dict_compat import TensorParameterDict
+ from typing import Union, Dict
+ 
+ import unittest
+@@ -142,10 +143,10 @@ class SingleFieldLinearNormalizer(DictOfTensorMixin):
+             assert x.shape == scale.shape
+             assert x.dtype == scale.dtype
+         
+-        params_dict = nn.ParameterDict({
++        params_dict = TensorParameterDict({
+             'scale': to_tensor(scale),
+             'offset': to_tensor(offset),
+-            'input_stats': nn.ParameterDict(
++            'input_stats': TensorParameterDict(
+                 dict_apply(input_stats_dict, to_tensor))
+         })
+         return cls(params_dict)
+@@ -246,10 +247,10 @@ def _fit(data: Union[torch.Tensor, np.ndarray, zarr.Array],
+             offset = torch.zeros_like(input_mean)
+     
+     # save
+-    this_params = nn.ParameterDict({
++    this_params = TensorParameterDict({
+         'scale': scale,
+         'offset': offset,
+-        'input_stats': nn.ParameterDict({
++        'input_stats': TensorParameterDict({
+             'min': input_min,
+             'max': input_max,
+             'mean': input_mean,

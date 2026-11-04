@@ -1,0 +1,5 @@
+{
+  "purpose": "frozen_checkpoint_cross_hardware_confirmation;zero training",
+  "sampling_steps": 6,
+  "execution_horizon": 1
+}

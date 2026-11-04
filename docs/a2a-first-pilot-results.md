@@ -1,0 +1,27 @@
+# A2A first single-task pilot
+
+### A2A first automatic chain completed — 0/20 for both flow-step settings
+- Integration14447428 COMPLETED0:0 in1m52s,onV10016GB. Passedrealbatchloss/backward/oneupdate,9Dhistory/7Daction,strictreloadmaxerror0,1stepfiniteoutput,and30liveLIBEROsteps.
+- Training14447500 COMPLETED0:0 in16m45s,all10000updates. Finaltrainloss.0580794;fixed32samplevalidationtotalflow/reconstructionloss.0702225. Doesnotestablishlearnedtaskbehavior.
+- Eval14447501(6flowsteps) COMPLETED0:0 in14m46s,0/20;eval14447502(1step) COMPLETED0:0 in11m48s,0/20. Bothall20trialscompleted,40GIFs/actionfilesverified. NoA2Aeffectivebaselineorreproductionclaim.
+- EvalGPUtypesdiffer(V100vsRTX6000);totalwalltimedifferenceisnotanisolatedinference-latencybenchmark. One-stepqualitynotestablished.
+- Submittedfrozenmodeldiagnostic14452686,freeembers1GPU/4CPU/24GB/max30min,emailenabled,0updates. Compareonline-testedEMA vsrawtrainingweights,actionAEteacherforcedreconstruction vs1/6stepflowprediction,train/val32windows,perdimensionerrors/grippersign/diversity/latentnorm/std.
+- Diagnosticpurposeistoseparateactionrepresentationerror,history-to-futureflowerror,andEMAeffectsbeforemoretraining;rootcausepending. AST/bashsyntaxpassed,newdiagnosticruntimepending.
+- Evidenceartifacts/a2a-integration/14447428/result.json,artifacts/a2a-train/14447500/metrics.json,result.json,artifacts/a2a-eval/14447501/result.json,14447502/result.json;nextlogs/a2a-diagnosis-14452686.log,artifacts/a2a-diagnosis/14452686/result.json.
+
+### Frozen A2A diagnostic path bug fixed; no checkpoint loss
+-14452686 FAILED1:0 in1m40s beforemodelconstruction/updates. Diagnostic hardcoded a2a-training/14447500/latest.pt,whilecopiedrunneractuallysaved dp-training/14447500/latest.pt. Thiswasourdiagnosticscriptpathbug.
+- Trainingreportandboth20trialevaluationreportsallreferencethesameexisting767006534bytecheckpoint underdp-training/14447500/latest.pt;bothrecordedchecksumsagree. Original0/20resultsareunchanged;no retrainingrequired.
+- Diagnosis nowloadscheckpointfromtrainingreport,assertscompleted10000updates/fileexistence,streamsSHA256againstactualevaluationreport,andcheckssourcecommitbeforeanalysis.
+- FutureA2Arunnersavepathcorrectedtoa2a-training;eval--training-jobnowresolveshistoricalreportcheckpointinstead ofassumingdirectory. Existingfilewasnotmoved/renamed/overwritten.
+- AST/path/existence/evaluation-referencepreflightpassed;resubmittedfrozendiagnostic14452776withsamefreeembersresources/email. Runtimeanalysistillpending;noflow/AEweightschanged.
+
+### Frozen A2A diagnosis completed — remaining action errors, not an obvious EMA-only issue
+-14452776 COMPLETED0:0 in2m15s,0updates. VerifiedcheckpointSHA8c955b0dd713e1b6e0b4f5f584a54bae4a7bbb10c9a93a7c9489aa673c10aa8f matchesactuallyevaluatedmodel.
+- RawvsEMAteacherforcederrorssimilar:validation6flowfirst-actionRMSEraw.239335/EMA.238524;directAE.226443/.226335. ThisdoesnotsupportprioritizingEMAasdominantcause,butisnotonlineequivalenceproof.
+- EMAvalidationdirectAEtranslationXYZpooledRMSE0.043174;6stepflowtranslationRMSE0.115456,on32uniformtimestepwindows. UnitsarerawLIBEROactioncommands,NOTmeters. DirectAEreceivestruefutureactionsandisonlyrepresentationdiagnostic,notdeployablepolicy.
+- AEgripperMSE.13235andflow6.13561,signagreement96.48%;representationstillhasgrippererrorsandtransitiontiming/contactqualitynotassessed. PooledfirstactionRMSEdominatedbygrippercomponent;donotlabelAEfullysolved.
+- History/futurelatentstdnonzeroandpredictedactionvariationnonzero;noevidenceforcompleteconstant-outputcollapseinthesesamples,butsemanticrepresentationqualitynotproven.
+-1vs6flowstepsdoesnotremoveerrors;originalboth0/20. MoreEulerstepsaloneisnotanestablishedfix.
+- Workingnextdirection:increaselearningbudgetorinspecttargetedreconstruction/closedloopparitybeforealgorithmchanges. Current10kbatch4=40000samplewindows,vsBAKU10kbatch16=160000;equalupdatesarenotequaltrainingexposure. Thisdifferenceiscontext,notproofundertrainingcausedfailure.
+- No newtraining/evaluationjobs submitted duringthisdiagnosticreview.

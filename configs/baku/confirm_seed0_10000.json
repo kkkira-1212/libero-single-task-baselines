@@ -1,0 +1,28 @@
+{
+  "purpose": "frozen_BAKU_seed0_confirmation_new_BAKU_eval_ids40_49",
+  "initial_state_ids": [
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "rollout_seeds": [
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "checkpoint_sha256": "6324176ced76a9931a4199dd988a743d682d26f8180663e9c4c71a34ff5f8dac"
+}

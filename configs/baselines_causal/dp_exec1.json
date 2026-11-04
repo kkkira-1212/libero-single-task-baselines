@@ -1,0 +1,4 @@
+{
+  "purpose": "prespecified secondary exec1 on corrected DP weights;not checkpoint selection",
+  "execution_horizon": 1
+}

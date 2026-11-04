@@ -1,0 +1,18 @@
+{
+  "method": "dp",
+  "gate_job": "14497123",
+  "sample_contract": "libero-poststep-next-command-v1",
+  "options": {
+    "action_offset": 1,
+    "require_next_action": true
+  },
+  "source_sha256": {
+    "adapters/libero_sequence.py": "a0fd0f2a75d12eea189750eabc85c31efe6f7f4e916dfefb746958c46052df75",
+    "adapters/dp_model.py": "3ca11ec54dcce24d691351b017565d04871a3f4ae16e044cfe01b58ddc21294c",
+    "experiments/dp_run.py": "c12d9790bb4864e68c99a88a59f98d3132bb769aec7f430114f1ef77fafa379f",
+    "adapters/libero_causal_contract.py": "e646a7e7cb29d89f6203c210a9c7e6ccf7c57a938943e70e690acbe5bb339d71",
+    "adapters/baseline_causal_runtime.py": "9d7079f5422f40187413b6047275646d3f5fb5ada90158d8da4eb73dda7685d6",
+    "scripts/check_baseline_causal.py": "b0d06db329ea18c27b7cc1121aa1690538ca10ed1fac5d73569313e1959cdd97",
+    "scripts/activate-causal-baseline.sh": "3c14caac9b4bb63fd2710702a21c8e447e448581945d7991078141839fa46e58"
+  }
+}

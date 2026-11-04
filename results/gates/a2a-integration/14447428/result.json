@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "training_updates": 1,
+  "online_rollouts": 0,
+  "sampling_steps": 6,
+  "purpose": "A2A_single_task_adapter_integration",
+  "shapes": {
+    "obs": {
+      "agentview": [
+        2,
+        8,
+        3,
+        128,
+        128
+      ],
+      "wrist": [
+        2,
+        8,
+        3,
+        128,
+        128
+      ],
+      "agent_pos": [
+        2,
+        8,
+        9
+      ]
+    },
+    "action": [
+      2,
+      16,
+      7
+    ]
+  },
+  "loss": 2.1130728721618652,
+  "gradient_norm": 29.66554832458496,
+  "reload_action_max_error": 0.0,
+  "single_step_output_shape_finite_passed": true,
+  "live_environment_steps": 30,
+  "checkpoint": "/storage/home/hcoda1/5/xwang3405/scratch/robot_manipulation/a2a-integration/14447428/interface.pt",
+  "gpu": "Tesla V100-PCIE-16GB",
+  "note": "One update,6stepflow integration and1step finite-output check only;no learned success/latency claims.",
+  "wall_seconds": 99.8180205821991
+}

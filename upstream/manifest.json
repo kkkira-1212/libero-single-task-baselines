@@ -1,0 +1,39 @@
+{
+  "repositories": [
+    {
+      "directory": "LIBERO",
+      "url": "https://github.com/Lifelong-Robot-Learning/LIBERO.git",
+      "commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+      "patch": null,
+      "license": "upstream/licenses/LIBERO-LICENSE"
+    },
+    {
+      "directory": "ACT",
+      "url": "https://github.com/tonyzhaozh/act.git",
+      "commit": "742c753c0d4a5d87076c8f69e5628c79a8cc5488",
+      "patch": "upstream/patches/ACT.patch",
+      "license": "upstream/licenses/ACT-LICENSE"
+    },
+    {
+      "directory": "DiffusionPolicy",
+      "url": "https://github.com/real-stanford/diffusion_policy.git",
+      "commit": "5ba07ac6661db573af695b419a7947ecb704690f",
+      "patch": "upstream/patches/DiffusionPolicy.patch",
+      "license": "upstream/licenses/DiffusionPolicy-LICENSE"
+    },
+    {
+      "directory": "BAKU",
+      "url": "https://github.com/siddhanthaldar/BAKU.git",
+      "commit": "47e367059191de30ac4b6353ff5615fdef11d8c5",
+      "patch": null,
+      "license": "upstream/licenses/BAKU-LICENSE"
+    },
+    {
+      "directory": "A2A",
+      "url": "https://github.com/JIAjindou/A2A_Flow_Matching.git",
+      "commit": "a5792ecf4e7f8fa4d85fe66ea9a50618138f925c",
+      "patch": "upstream/patches/A2A.patch",
+      "license": "upstream/licenses/A2A-LICENSE"
+    }
+  ]
+}

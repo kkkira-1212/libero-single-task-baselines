@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "method": "baku",
+  "training_updates": 1,
+  "data_only": false,
+  "raw_data_windows_checked": 200,
+  "eligible_training_anchors": 6156,
+  "endpoint_padding": "unchanged author zero command padding",
+  "original_pkls_verified": true,
+  "loss": 15.329227447509766,
+  "reload_max_abs": 0.0,
+  "source_sha256": {
+    "adapters/baku_causal.py": "47c352f3d11faf0f7ff1087ed5b9efe968f6728a9a253fa7b664c6af3867f84a",
+    "adapters/baku_live.py": "9b6662bc522decb2e923ff2d8b500aa34e8d3109bdd519201a0738b5d4e8fdaf",
+    "experiments/baku_run.py": "a4da829b989bfe53fc58667bcdf342d0ec79a3fcdecac2f0c34410b6905ad1f2",
+    "third_party/BAKU/baku/read_data/libero.py": "a296e065f4df5b7e864b0c908ea33efceeb3e03928974d433e018dfbfd6595bb",
+    "adapters/libero_causal_contract.py": "e646a7e7cb29d89f6203c210a9c7e6ccf7c57a938943e70e690acbe5bb339d71",
+    "adapters/baseline_causal_runtime.py": "9d7079f5422f40187413b6047275646d3f5fb5ada90158d8da4eb73dda7685d6",
+    "scripts/check_baseline_causal.py": "b0d06db329ea18c27b7cc1121aa1690538ca10ed1fac5d73569313e1959cdd97",
+    "scripts/activate-causal-baseline.sh": "3c14caac9b4bb63fd2710702a21c8e447e448581945d7991078141839fa46e58"
+  },
+  "scope": "real-data CUDA update, prediction and strict reload; not policy success",
+  "gpu": "Quadro RTX 6000",
+  "wall_seconds": 171.75764322280884
+}

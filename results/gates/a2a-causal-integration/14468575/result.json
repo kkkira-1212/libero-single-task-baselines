@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "training_updates": 2,
+  "verified_contracts": [
+    "libero-same-index-v0",
+    "libero-poststep-next-command-v1"
+  ],
+  "dataset_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d",
+  "paired_windows_checked": 200,
+  "paired_training_anchors": 6156,
+  "paired_validation_anchors": 1602,
+  "legacy_default_compatibility_passed": true,
+  "variants": [
+    {
+      "contract": "libero-same-index-v0",
+      "loss": 2.1131398677825928,
+      "gradient_norm": 29.666709899902344,
+      "actual_future_encoder_input_matches": true,
+      "reload_action_max_abs": 0.0,
+      "output_shape": [
+        2,
+        8,
+        7
+      ]
+    },
+    {
+      "contract": "libero-poststep-next-command-v1",
+      "loss": 2.1117799282073975,
+      "gradient_norm": 29.620206832885742,
+      "actual_future_encoder_input_matches": true,
+      "reload_action_max_abs": 0.0,
+      "output_shape": [
+        2,
+        8,
+        7
+      ]
+    }
+  ],
+  "initial_state_sha256": "fecc6f9c1e9c03a856aa6e6ce7c3e21473a01b94ef180d4420677e9950745530",
+  "source_sha256": {
+    "adapters/libero_causal_contract.py": "e646a7e7cb29d89f6203c210a9c7e6ccf7c57a938943e70e690acbe5bb339d71",
+    "adapters/libero_sequence.py": "a0fd0f2a75d12eea189750eabc85c31efe6f7f4e916dfefb746958c46052df75",
+    "adapters/a2a_model.py": "ea4238d3519f78487b245147b96b3e05e13329fb2cfa3fd40524e3c9ed8fffb7",
+    "experiments/a2a_run.py": "d94f45359282989c367383058158d71ed96b0ad83c9d9df99f69462ac6c489f4",
+    "third_party/A2A/roboverse_learn/il/policies/a2a/a2a_policy.py": "7056bca352d314c14447be0dce998bba01b44ea9c783016be28eeab9f417f5f1"
+  },
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "wall_seconds": 173.68167543411255
+}

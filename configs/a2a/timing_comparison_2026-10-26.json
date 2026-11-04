@@ -1,0 +1,18 @@
+{
+  "gate_job": "14468575",
+  "purpose": "paired timing-only; same seed0/anchors/hyperparameters; no budget scaling",
+  "variants": {
+    "control": {
+      "config": "configs/a2a/train_timing_control_seed0_10000.json",
+      "train_job": "14468637",
+      "eval_job": "14468638"
+    },
+    "causal": {
+      "config": "configs/a2a/train_timing_causal_seed0_10000.json",
+      "train_job": "14468639",
+      "eval_job": "14468640"
+    }
+  },
+  "collector_job": "14468641",
+  "data_check_job": "14468711"
+}

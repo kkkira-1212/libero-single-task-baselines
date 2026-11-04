@@ -1,0 +1,296 @@
+{
+  "completed": true,
+  "job_id": "14497141",
+  "checkpoint": "/storage/home/hcoda1/5/xwang3405/scratch/robot_manipulation/baku-training/14497140/latest.pt",
+  "checkpoint_sha256": "89fc4fd785dfc37c46642e612648e173db5a21156c96826e23bf344230fe405e",
+  "checkpoint_training_step": 10000,
+  "config": {
+    "purpose": "BAKU_causal_v1_seed1_fixed_budget",
+    "seed": 1,
+    "updates": 10000,
+    "batch_size": 16,
+    "checkpoint_interval": 500,
+    "wall_budget_seconds": 6600,
+    "model_config": {
+      "obs_shape": {
+        "pixels": [
+          3,
+          128,
+          128
+        ],
+        "pixels_egocentric": [
+          3,
+          128,
+          128
+        ],
+        "proprioceptive": [
+          9
+        ]
+      },
+      "action_shape": [
+        7
+      ],
+      "device": "cuda",
+      "lr": 0.0001,
+      "hidden_dim": 256,
+      "stddev_schedule": 0.1,
+      "stddev_clip": 0.3,
+      "use_tb": true,
+      "augment": true,
+      "obs_type": "pixels",
+      "encoder_type": "resnet",
+      "policy_type": "gpt",
+      "policy_head": "deterministic",
+      "pixel_keys": [
+        "pixels",
+        "pixels_egocentric"
+      ],
+      "proprio_key": "proprioceptive",
+      "feature_key": "features",
+      "use_proprio": true,
+      "train_encoder": true,
+      "norm": false,
+      "history": false,
+      "history_len": 10,
+      "eval_history_len": 5,
+      "separate_encoders": false,
+      "temporal_agg": true,
+      "max_episode_len": 600,
+      "num_queries": 10,
+      "prompt": "text",
+      "use_language": true,
+      "film": true
+    },
+    "data_root": "/storage/home/hcoda1/5/xwang3405/scratch/robot_manipulation/baku-data/14354211",
+    "dataset_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d",
+    "pkl_sha256": {
+      "train": "69fb83c2df6bb144bb039ff557ada72c8b4d1816f296e334569b79d9b3227af2",
+      "validation": "b50daba905f9a26dd5acca725f8ceda801e1b4329d18a239f4305cfc4265c959"
+    },
+    "initial_state_ids": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "rollout_seeds": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "rollout_horizon": 600,
+    "settle_steps": 10,
+    "checkpoint_selection": "final predetermined10000updates;no validation/online checkpoint selection",
+    "scope": "small single-task adaptation,not original paper training recipe",
+    "normalization": "official LIBERO nearidentity stats;images flipped once;model ToTensor",
+    "sampling": "official BCDataset uniformepisode then validwindow;notDP timestepuniformsampling",
+    "sample_contract": "libero-poststep-next-command-v1",
+    "sample_anchor_policy": "has_next_command"
+  },
+  "evaluation_protocol": {},
+  "rollouts": [
+    {
+      "initial_state_id": 20,
+      "seed": 20,
+      "steps": 140,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 21.315736293792725
+    },
+    {
+      "initial_state_id": 21,
+      "seed": 21,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 31.31735062599182
+    },
+    {
+      "initial_state_id": 22,
+      "seed": 22,
+      "steps": 148,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 7.117340087890625
+    },
+    {
+      "initial_state_id": 23,
+      "seed": 23,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 30.138278484344482
+    },
+    {
+      "initial_state_id": 24,
+      "seed": 24,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 31.04231905937195
+    },
+    {
+      "initial_state_id": 25,
+      "seed": 25,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 29.930593013763428
+    },
+    {
+      "initial_state_id": 26,
+      "seed": 26,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 30.25179696083069
+    },
+    {
+      "initial_state_id": 27,
+      "seed": 27,
+      "steps": 237,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 11.6344313621521
+    },
+    {
+      "initial_state_id": 28,
+      "seed": 28,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 32.090567111968994
+    },
+    {
+      "initial_state_id": 29,
+      "seed": 29,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 32.22314167022705
+    },
+    {
+      "initial_state_id": 30,
+      "seed": 30,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 29.78244161605835
+    },
+    {
+      "initial_state_id": 31,
+      "seed": 31,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 27.61243987083435
+    },
+    {
+      "initial_state_id": 32,
+      "seed": 32,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 32.85267639160156
+    },
+    {
+      "initial_state_id": 33,
+      "seed": 33,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 30.819535970687866
+    },
+    {
+      "initial_state_id": 34,
+      "seed": 34,
+      "steps": 211,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 10.264523267745972
+    },
+    {
+      "initial_state_id": 35,
+      "seed": 35,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 32.680091857910156
+    },
+    {
+      "initial_state_id": 36,
+      "seed": 36,
+      "steps": 231,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 11.625617265701294
+    },
+    {
+      "initial_state_id": 37,
+      "seed": 37,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 31.46486759185791
+    },
+    {
+      "initial_state_id": 38,
+      "seed": 38,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 28.879504203796387
+    },
+    {
+      "initial_state_id": 39,
+      "seed": 39,
+      "steps": 145,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 6.639968156814575
+    }
+  ],
+  "training_updates_this_run": 0,
+  "gpu": "Tesla V100-PCIE-16GB",
+  "available_initial_states": 50,
+  "successes": 6,
+  "completed_rollouts": 20,
+  "success_rate": 0.3,
+  "wilson95": [
+    0.1454772448676043,
+    0.5189728183535235
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "job_id": "14497125",
+  "completed": true,
+  "checkpoint": "/storage/home/hcoda1/5/xwang3405/scratch/robot_manipulation/dp-training/14497124/latest.pt",
+  "checkpoint_sha256": "2dddd8cc689e9c7d351d22242dc9c5e00b64980f5fcb8ca2b7a457eef1f3afbe",
+  "checkpoint_training_step": 3000,
+  "weights": "EMA",
+  "config": {
+    "purpose": "DP_causal_v1_seed0_fixed_budget",
+    "seed": 0,
+    "updates": 3000,
+    "batch_size": 16,
+    "lr": 0.0001,
+    "weight_decay": 1e-06,
+    "grad_clip": 1,
+    "warmup_updates": 100,
+    "pretrained_backbone": false,
+    "inference_steps": 100,
+    "ema_power": 0.75,
+    "checkpoint_interval": 500,
+    "wall_budget_seconds": 6600,
+    "rollout_initial_state_ids": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "rollout_seeds": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "rollout_horizon": 600,
+    "settle_steps": 10,
+    "execution_horizon": 5,
+    "horizon": 16,
+    "n_obs_steps": 2,
+    "n_action_steps": 8,
+    "checkpoint_selection": "final predetermined update, EMA weights; no online selection",
+    "dataset_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d",
+    "sample_contract": "libero-poststep-next-command-v1",
+    "sample_anchor_policy": "has_next_command"
+  },
+  "evaluation_protocol": {},
+  "execution_horizon": 5,
+  "rollouts": [
+    {
+      "initial_state_id": 20,
+      "seed": 20,
+      "steps": 173,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 38.8347544670105
+    },
+    {
+      "initial_state_id": 21,
+      "seed": 21,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 133.4531955718994
+    },
+    {
+      "initial_state_id": 22,
+      "seed": 22,
+      "steps": 159,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 35.59185266494751
+    },
+    {
+      "initial_state_id": 23,
+      "seed": 23,
+      "steps": 139,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 30.796518087387085
+    },
+    {
+      "initial_state_id": 24,
+      "seed": 24,
+      "steps": 149,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 33.76706504821777
+    },
+    {
+      "initial_state_id": 25,
+      "seed": 25,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 132.40147185325623
+    },
+    {
+      "initial_state_id": 26,
+      "seed": 26,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 135.2223198413849
+    },
+    {
+      "initial_state_id": 27,
+      "seed": 27,
+      "steps": 146,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 34.88197565078735
+    },
+    {
+      "initial_state_id": 28,
+      "seed": 28,
+      "steps": 152,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 34.989386796951294
+    },
+    {
+      "initial_state_id": 29,
+      "seed": 29,
+      "steps": 126,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 28.620471715927124
+    },
+    {
+      "initial_state_id": 30,
+      "seed": 30,
+      "steps": 141,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 32.632973432540894
+    },
+    {
+      "initial_state_id": 31,
+      "seed": 31,
+      "steps": 136,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 31.230355739593506
+    },
+    {
+      "initial_state_id": 32,
+      "seed": 32,
+      "steps": 157,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 35.283459424972534
+    },
+    {
+      "initial_state_id": 33,
+      "seed": 33,
+      "steps": 140,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 30.927319765090942
+    },
+    {
+      "initial_state_id": 34,
+      "seed": 34,
+      "steps": 143,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 32.47723937034607
+    },
+    {
+      "initial_state_id": 35,
+      "seed": 35,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 132.24033665657043
+    },
+    {
+      "initial_state_id": 36,
+      "seed": 36,
+      "steps": 600,
+      "success": false,
+      "completed": true,
+      "wall_seconds": 138.92019939422607
+    },
+    {
+      "initial_state_id": 37,
+      "seed": 37,
+      "steps": 149,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 34.356595039367676
+    },
+    {
+      "initial_state_id": 38,
+      "seed": 38,
+      "steps": 164,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 37.72767114639282
+    },
+    {
+      "initial_state_id": 39,
+      "seed": 39,
+      "steps": 131,
+      "success": true,
+      "completed": true,
+      "wall_seconds": 29.767447233200073
+    }
+  ],
+  "gpu": "Quadro RTX 6000",
+  "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+  "available_initial_states": 50,
+  "successes": 15,
+  "completed_rollouts": 20,
+  "success_rate": 0.75,
+  "wilson95": [
+    0.531299122381256,
+    0.8881382985923343
+  ]
+}

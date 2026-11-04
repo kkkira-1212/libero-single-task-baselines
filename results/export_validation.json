@@ -1,0 +1,142 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "run": "act_execute5_seed0_original_zero_warmup",
+      "complete": true,
+      "rollouts": 20,
+      "action_files_checked": 20,
+      "original_gif_headers_checked": 20,
+      "checkpoint_file_exists": true,
+      "checkpoint_rehashed_this_export": false
+    },
+    {
+      "run": "act_execute5_seed1_original_zero_warmup",
+      "complete": true,
+      "rollouts": 20,
+      "action_files_checked": 20,
+      "original_gif_headers_checked": 20,
+      "checkpoint_file_exists": true,
+      "checkpoint_rehashed_this_export": false
+    },
+    {
+      "run": "dp_execute5_seed0_original_zero_warmup",
+      "complete": true,
+      "rollouts": 20,
+      "action_files_checked": 20,
+      "original_gif_headers_checked": 20,
+      "checkpoint_file_exists": true,
+      "checkpoint_rehashed_this_export": false
+    },
+    {
+      "run": "dp_execute1_seed0_original_zero_warmup",
+      "complete": true,
+      "rollouts": 20,
+      "action_files_checked": 20,
+      "original_gif_headers_checked": 20,
+      "checkpoint_file_exists": true,
+      "checkpoint_rehashed_this_export": false
+    },
+    {
+      "run": "dp_execute5_seed1_original_zero_warmup",
+      "complete": true,
+      "rollouts": 20,
+      "action_files_checked": 20,
+      "original_gif_headers_checked": 20,
+      "checkpoint_file_exists": true,
+      "checkpoint_rehashed_this_export": false
+    },
+    {
+      "run": "dp_execute1_seed1_original_zero_warmup",
+      "complete": true,
+      "rollouts": 20,
+      "action_files_checked": 20,
+      "original_gif_headers_checked": 20,
+      "checkpoint_file_exists": true,
+      "checkpoint_rehashed_this_export": false
+    },
+    {
+      "run": "baku_temporal_aggregation_seed0_original_zero_warmup",
+      "complete": true,
+      "rollouts": 20,
+      "action_files_checked": 20,
+      "original_gif_headers_checked": 20,
+      "checkpoint_file_exists": true,
+      "checkpoint_rehashed_this_export": false
+    },
+    {
+      "run": "baku_temporal_aggregation_seed1_original_zero_warmup",
+      "complete": true,
+      "rollouts": 20,
+      "action_files_checked": 20,
+      "original_gif_headers_checked": 20,
+      "checkpoint_file_exists": true,
+      "checkpoint_rehashed_this_export": false
+    },
+    {
+      "run": "a2a_flow6_execute1_seed0_original_zero_warmup",
+      "complete": true,
+      "rollouts": 20,
+      "action_files_checked": 20,
+      "original_gif_headers_checked": 20,
+      "checkpoint_file_exists": true,
+      "checkpoint_rehashed_this_export": false
+    },
+    {
+      "run": "a2a_flow6_execute1_seed1_original_zero_warmup",
+      "complete": true,
+      "rollouts": 20,
+      "action_files_checked": 20,
+      "original_gif_headers_checked": 20,
+      "checkpoint_file_exists": true,
+      "checkpoint_rehashed_this_export": false
+    },
+    {
+      "run": "a2a_flow6_execute1_seed0_diagnostic_open_warmup",
+      "complete": true,
+      "rollouts": 20,
+      "action_files_checked": 20,
+      "original_gif_headers_checked": 20,
+      "checkpoint_file_exists": true,
+      "checkpoint_rehashed_this_export": false
+    },
+    {
+      "run": "a2a_flow6_execute1_seed1_diagnostic_open_warmup",
+      "complete": true,
+      "rollouts": 20,
+      "action_files_checked": 20,
+      "original_gif_headers_checked": 20,
+      "checkpoint_file_exists": true,
+      "checkpoint_rehashed_this_export": false
+    },
+    {
+      "run": "a2a_flow1_execute1_seed0_additional_check",
+      "complete": true,
+      "rollouts": 20,
+      "action_files_checked": 20,
+      "original_gif_headers_checked": 20,
+      "checkpoint_file_exists": true,
+      "checkpoint_rehashed_this_export": false
+    },
+    {
+      "run": "a2a_newstates_flow6_execute1_seed0_additional_check",
+      "complete": true,
+      "rollouts": 10,
+      "action_files_checked": 10,
+      "original_gif_headers_checked": 10,
+      "checkpoint_file_exists": true,
+      "checkpoint_rehashed_this_export": false
+    },
+    {
+      "run": "a2a_legacy_labels_matched_control_seed0_timing_ablation_control",
+      "complete": true,
+      "rollouts": 20,
+      "action_files_checked": 20,
+      "original_gif_headers_checked": 20,
+      "checkpoint_file_exists": true,
+      "checkpoint_rehashed_this_export": false
+    }
+  ],
+  "rollouts_checked": 290,
+  "checkpoint_hash_scope": "Recorded historical hashes preserved; current files existence/size checked; no current checkpoint rehash in this export"
+}

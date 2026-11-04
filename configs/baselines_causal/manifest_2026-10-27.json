@@ -1,0 +1,79 @@
+{
+  "purpose": "Explicit causal-v1 baseline comparison;historical method-specific budgets preserved",
+  "dataset_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d",
+  "initial_state_ids": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "methods": {
+    "act": {
+      "data_check_job": "14497115",
+      "gate_job": "14497117",
+      "runs": {
+        "0": {
+          "config": "configs/baselines_causal/act_seed0.json",
+          "training_job": "14497118",
+          "primary_evaluation_job": "14497119"
+        },
+        "1": {
+          "config": "configs/baselines_causal/act_seed1.json",
+          "training_job": "14497120",
+          "primary_evaluation_job": "14497121"
+        }
+      }
+    },
+    "dp": {
+      "data_check_job": "14497122",
+      "gate_job": "14497123",
+      "runs": {
+        "0": {
+          "config": "configs/baselines_causal/dp_seed0.json",
+          "training_job": "14497124",
+          "primary_evaluation_job": "14497125",
+          "secondary_exec1_evaluation_job": "14497126"
+        },
+        "1": {
+          "config": "configs/baselines_causal/dp_seed1.json",
+          "training_job": "14497127",
+          "primary_evaluation_job": "14497129",
+          "secondary_exec1_evaluation_job": "14497132"
+        }
+      }
+    },
+    "baku": {
+      "data_check_job": "14497136",
+      "gate_job": "14497137",
+      "runs": {
+        "0": {
+          "config": "configs/baselines_causal/baku_seed0.json",
+          "training_job": "14497138",
+          "primary_evaluation_job": "14497139"
+        },
+        "1": {
+          "config": "configs/baselines_causal/baku_seed1.json",
+          "training_job": "14497140",
+          "primary_evaluation_job": "14497141"
+        }
+      }
+    }
+  },
+  "collector_job": "14497224"
+}

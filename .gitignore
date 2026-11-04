@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+.DS_Store
+third_party/
+artifacts/
+logs/
+configs/libero/config.yaml
+*.pt
+*.pth
+*.ckpt
+*.hdf5
+*.pkl

@@ -1,0 +1,39 @@
+{
+  "scope": "A2A causal-v1 confirmation,one task; no budget/architecture/loss search",
+  "frozen_manifest": "configs/a2a/frozen_causal_seed0_10000.json",
+  "seed1_training": {
+    "job_id": "14495968",
+    "config": "configs/a2a/train_causal_seed1_10000.json"
+  },
+  "baseline_eval_job": "14468640",
+  "baseline_successes": 20,
+  "baseline_rollouts": 20,
+  "evaluations": {
+    "seed0_newstates_steps6": {
+      "job_id": "14495966",
+      "protocol": "configs/a2a/confirm_seed0_newstates_steps6.json",
+      "frozen": true
+    },
+    "seed0_steps1": {
+      "job_id": "14495967",
+      "protocol": "configs/a2a/confirm_seed0_steps1.json",
+      "frozen": true
+    },
+    "seed1_steps6": {
+      "job_id": "14495969",
+      "protocol": "configs/a2a/confirm_seed1_steps6.json",
+      "frozen": false
+    }
+  },
+  "source_sha256": {
+    "experiments/a2a_confirm_eval.py": "bae9f72d0ce9f14c495581e3a458d0f6a2ab5e2a3a0acc57ab60b3bb3fcc9466",
+    "experiments/a2a_run.py": "d94f45359282989c367383058158d71ed96b0ad83c9d9df99f69462ac6c489f4",
+    "adapters/a2a_model.py": "ea4238d3519f78487b245147b96b3e05e13329fb2cfa3fd40524e3c9ed8fffb7"
+  },
+  "plan": {
+    "exam": "2026-10-29",
+    "consolidate_results": "2026-11-01",
+    "mentor_report": "2026-11-02"
+  },
+  "collector_job": "14495986"
+}

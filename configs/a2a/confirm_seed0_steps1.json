@@ -1,0 +1,6 @@
+{
+  "purpose": "same_frozen_seed0_weights_and_IDs20..39;one_flow_step",
+  "sampling_steps": 1,
+  "execution_horizon": 1,
+  "checkpoint_sha256": "adec7729806f88631e201c25fb2317e4bcaea0e317a4b4bca543b337c1e770f2"
+}

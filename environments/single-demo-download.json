@@ -1,0 +1,9 @@
+{
+  "repo": "yifengzhu-hf/LIBERO-datasets",
+  "requested_revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+  "url": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets/resolve/f13aa24a3da8c43c7225569f28c562979fa0e35a/libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket_demo.hdf5",
+  "path": "/storage/home/hcoda1/5/xwang3405/scratch/robot_manipulation/datasets/libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket_demo.hdf5",
+  "bytes": 780145352,
+  "sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d",
+  "verified": true
+}

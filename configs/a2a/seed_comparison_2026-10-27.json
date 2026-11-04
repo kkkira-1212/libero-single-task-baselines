@@ -1,0 +1,10 @@
+{
+  "offline_job": "14513136",
+  "oracle_job": "14513226",
+  "training_updates": 0,
+  "purpose": "same-input frozen raw/EMA AE/flow compare and matched oracle replay",
+  "cpu_preliminary_job": "14513419",
+  "collector_job": "14513611",
+  "initial_state_probe_job": "14515931",
+  "open_init_confirmation_job": "14516670"
+}

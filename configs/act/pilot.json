@@ -1,0 +1,21 @@
+{
+  "purpose": "integrated_pipeline_pilot_not_final_benchmark",
+  "seed": 0,
+  "updates": 200,
+  "batch_size": 8,
+  "lr": 0.00005,
+  "backbone_lr": 0.00001,
+  "kl_weight": 10.0,
+  "grad_clip": 1.0,
+  "checkpoint_interval": 50,
+  "validation_samples_per_demo": 4,
+  "pretrained_backbone": false,
+  "chunk_size": 20,
+  "execution_horizon": 5,
+  "temporal_ensemble": false,
+  "rollout_initial_state_ids": [0, 1],
+  "rollout_seeds": [0, 1],
+  "rollout_horizon": 150,
+  "settle_steps": 10,
+  "wall_budget_before_final_checkpoint_seconds": 1200
+}
