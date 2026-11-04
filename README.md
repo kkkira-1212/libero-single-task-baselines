@@ -33,7 +33,6 @@ The diagnostic uses unchanged weights, the same 20 initial-state IDs, and the sa
 - [Reproduction guide](docs/REPRODUCE.md): data, environments, pinned author sources, training and evaluation.
 - [Machine-readable results](results/runs.json) and [CSV](results/summary.csv): every reported run, setting, checkpoint checksum, and evidence location.
 - [Results and videos](results/README.md): representative successes and failures, plus protocol distinctions.
-- [Technical walkthrough](docs/WALKTHROUGH_ZH.md): plain-language explanation and code reading route.
 - [Delivery status](docs/DELIVERY_STATUS.md): what has actually been verified and what remains pending.
 
 ## Inspect results without a GPU
