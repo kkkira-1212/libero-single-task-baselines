@@ -131,7 +131,29 @@
       "wall_seconds": 69.56257653236389
     }
   },
-  "a2a_data_check": null,
-  "cpu_completion": null,
+  "a2a_data_check": {
+    "passed": true,
+    "training_updates": 0,
+    "verified_contracts": [],
+    "dataset_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d",
+    "paired_windows_checked": 200,
+    "paired_training_anchors": 6156,
+    "paired_validation_anchors": 1602,
+    "legacy_default_compatibility_passed": true,
+    "scope": "data_only; GPU loss/update/reload gate remains separate",
+    "wall_seconds": 11.702382802963257
+  },
+  "cpu_completion": {
+    "passed": true,
+    "job": "15038964",
+    "scope": "Post-maintenance packaged data interfaces and checkpoint/dataset integrity; no training or scored rollout",
+    "checks": [
+      "artifacts/release-assets/15038964/result.json",
+      "artifacts/a2a-causal-data/15038964/result.json",
+      "artifacts/release-check/15038964/data-act.json",
+      "artifacts/release-check/15038964/data-dp.json",
+      "artifacts/release-check/15038964/data-baku.json"
+    ]
+  },
   "dp_gpu_smoke": null
 }

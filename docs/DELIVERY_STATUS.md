@@ -3,7 +3,7 @@
 - Completed historical training/evaluation: ACT, DP, BAKU and A2A on one task. Export includes15conditions/290episodes, complete actions, source snapshots and representative animations.
 - Independent exported-evidence verification: passed locally. See `results/verification.json`.
 - Author code: exact revisions and generated patches recorded, original licenses retained.
-- Repository tools: curated PACE entry point added; Python compilation and shell syntax checked. Post-maintenance CPU check15038964 is running. ACT/DP/BAKU data checks have passed; the A2A data interface is pending. DependentGPU15039257 will check frozenDP inference/EGL/10actions, with no success-rate claim.
+- Repository tools: curated PACE entry point added; Python compilation and shell syntax checked. Post-maintenance CPU check15038964 COMPLETED0:0 in11m09s. ACT/DP/BAKU/A2A real-data interface checks all passed with zero updates. GPU15039257 is queued to check frozenDP inference/EGL/10actions, with no success-rate claim.
 - Checkpoint files: retained on PACE, paths/historical checksums indexed. All9unique retained checkpoints and the demonstration file were rehashed successfully on the compute node. See results/maintenance/checks_2026-11-03.json.
 - GitHub publication: https://github.com/kkkira-1212/libero-single-task-baselines is public, after explicit user authorization. A fresh clone passed the exported-evidence audit.
 - No new training or adaptive-timing research experiment was run for this deliverable. Maintenance prevented the earlier planned work; existing findings are presented with their actual limits.
