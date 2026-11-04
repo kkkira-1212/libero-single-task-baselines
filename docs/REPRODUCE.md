@@ -123,4 +123,4 @@ Keep this score separate from the original zero-warmup score. The frozen evaluat
 sbatch tools/verify_pace.sbatch
 ```
 
-This read-only CPU job verifies the archived upstream revisions/patches, exported results, retained checkpoint/dataset bytes, and real-data interfaces for all four methods. It performs no optimizer updates or scored rollouts. The current status and job ID are in `docs/DELIVERY_STATUS.md`. GPU policy execution after maintenance remains a separate check unless explicitly recorded there.
+This read-only CPU job verifies the archived upstream revisions/patches, exported results, retained checkpoint/dataset bytes, and real-data interfaces for all four methods. It performs no optimizer updates or scored rollouts. The current status and job ID are in `docs/DELIVERY_STATUS.md`. The short frozen-DP GPU/EGL check is tools/smoke_dp.sbatch. It runs two policy calls and at most10physical actions, with no scored task-success claim. Its actual status is recorded separately there.

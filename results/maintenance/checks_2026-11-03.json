@@ -1,0 +1,137 @@
+{
+  "cpu_job": "15038964",
+  "gpu_smoke_job": "15039257",
+  "asset_check": {
+    "job": "15038964",
+    "passed": true,
+    "files": {
+      "/storage/home/hcoda1/5/xwang3405/scratch/robot_manipulation/act-pilot/14497118/latest.pt": {
+        "expected": "c25f88522eb687963b80eb4dddde58a1bedd739590695d2f5ff2d8e214cb77ed",
+        "actual": "c25f88522eb687963b80eb4dddde58a1bedd739590695d2f5ff2d8e214cb77ed",
+        "bytes": 1006859641,
+        "passed": true
+      },
+      "/storage/home/hcoda1/5/xwang3405/scratch/robot_manipulation/act-pilot/14497120/latest.pt": {
+        "expected": "022eb6cd2f7bf7aba41a82d6c2a32d5531f6a699198c9952b57fec2ccfc7d826",
+        "actual": "022eb6cd2f7bf7aba41a82d6c2a32d5531f6a699198c9952b57fec2ccfc7d826",
+        "bytes": 1006859769,
+        "passed": true
+      },
+      "/storage/home/hcoda1/5/xwang3405/scratch/robot_manipulation/dp-training/14497124/latest.pt": {
+        "expected": "2dddd8cc689e9c7d351d22242dc9c5e00b64980f5fcb8ca2b7a457eef1f3afbe",
+        "actual": "2dddd8cc689e9c7d351d22242dc9c5e00b64980f5fcb8ca2b7a457eef1f3afbe",
+        "bytes": 1875411377,
+        "passed": true
+      },
+      "/storage/home/hcoda1/5/xwang3405/scratch/robot_manipulation/dp-training/14497127/latest.pt": {
+        "expected": "3cc834a49525a5589537ec60ce5814358ecc1127ce713822fdb163d42a89cf26",
+        "actual": "3cc834a49525a5589537ec60ce5814358ecc1127ce713822fdb163d42a89cf26",
+        "bytes": 1875411377,
+        "passed": true
+      },
+      "/storage/home/hcoda1/5/xwang3405/scratch/robot_manipulation/baku-training/14497138/latest.pt": {
+        "expected": "dfa4fa99763692c0f830ef44be71f7c035c70fa8757607df487d0df2883e2263",
+        "actual": "dfa4fa99763692c0f830ef44be71f7c035c70fa8757607df487d0df2883e2263",
+        "bytes": 105695087,
+        "passed": true
+      },
+      "/storage/home/hcoda1/5/xwang3405/scratch/robot_manipulation/baku-training/14497140/latest.pt": {
+        "expected": "89fc4fd785dfc37c46642e612648e173db5a21156c96826e23bf344230fe405e",
+        "actual": "89fc4fd785dfc37c46642e612648e173db5a21156c96826e23bf344230fe405e",
+        "bytes": 105695087,
+        "passed": true
+      },
+      "/storage/home/hcoda1/5/xwang3405/scratch/robot_manipulation/a2a-training/14468639/latest.pt": {
+        "expected": "adec7729806f88631e201c25fb2317e4bcaea0e317a4b4bca543b337c1e770f2",
+        "actual": "adec7729806f88631e201c25fb2317e4bcaea0e317a4b4bca543b337c1e770f2",
+        "bytes": 767006790,
+        "passed": true
+      },
+      "/storage/home/hcoda1/5/xwang3405/scratch/robot_manipulation/a2a-training/14495968/latest.pt": {
+        "expected": "8af9785240ab33a6054c8fe81bd2398e41ec88674a72a457f642b1bc4d12520c",
+        "actual": "8af9785240ab33a6054c8fe81bd2398e41ec88674a72a457f642b1bc4d12520c",
+        "bytes": 767006790,
+        "passed": true
+      },
+      "/storage/home/hcoda1/5/xwang3405/scratch/robot_manipulation/a2a-training/14468637/latest.pt": {
+        "expected": "e645df6e60e8fc1c227e5f6ead5f4145f742cbfd52953f09797269d6e604950f",
+        "actual": "e645df6e60e8fc1c227e5f6ead5f4145f742cbfd52953f09797269d6e604950f",
+        "bytes": 767006790,
+        "passed": true
+      },
+      "/storage/home/hcoda1/5/xwang3405/scratch/robot_manipulation/datasets/libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket_demo.hdf5": {
+        "expected": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d",
+        "actual": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d",
+        "bytes": 780145352,
+        "passed": true
+      }
+    },
+    "wall_seconds": 32.51550364494324
+  },
+  "data_checks": {
+    "act": {
+      "passed": true,
+      "method": "act",
+      "training_updates": 0,
+      "data_only": true,
+      "raw_data_windows_checked": 200,
+      "eligible_training_anchors": 6156,
+      "source_sha256": {
+        "adapters/libero_act.py": "37d12f11ccad36855e6b636f98b2aae3a48277ef00daf08beed78eb54e279ecf",
+        "adapters/act_model.py": "1b97e8b65b0d4fd6d7f744ac105c78d65474b3a8bc55c744fe4dae8ba9bc5749",
+        "experiments/act_pilot.py": "03e8b2920f8b78fbde48737903f9fdadef5b0c3a8efc18e4ff5e5e42f126ef2f",
+        "experiments/act_eval.py": "21f1f2b4535c4dde8ace2907547411c66d8b9ed766c427b8cb016a574e1205b9",
+        "adapters/libero_causal_contract.py": "e646a7e7cb29d89f6203c210a9c7e6ccf7c57a938943e70e690acbe5bb339d71",
+        "adapters/baseline_causal_runtime.py": "9d7079f5422f40187413b6047275646d3f5fb5ada90158d8da4eb73dda7685d6",
+        "scripts/check_baseline_causal.py": "b0d06db329ea18c27b7cc1121aa1690538ca10ed1fac5d73569313e1959cdd97",
+        "scripts/activate-causal-baseline.sh": "3c14caac9b4bb63fd2710702a21c8e447e448581945d7991078141839fa46e58"
+      },
+      "scope": "data-only",
+      "wall_seconds": 4.923184633255005
+    },
+    "dp": {
+      "passed": true,
+      "method": "dp",
+      "training_updates": 0,
+      "data_only": true,
+      "raw_data_windows_checked": 200,
+      "eligible_training_anchors": 6156,
+      "source_sha256": {
+        "adapters/libero_sequence.py": "a0fd0f2a75d12eea189750eabc85c31efe6f7f4e916dfefb746958c46052df75",
+        "adapters/dp_model.py": "3ca11ec54dcce24d691351b017565d04871a3f4ae16e044cfe01b58ddc21294c",
+        "experiments/dp_run.py": "c12d9790bb4864e68c99a88a59f98d3132bb769aec7f430114f1ef77fafa379f",
+        "adapters/libero_causal_contract.py": "e646a7e7cb29d89f6203c210a9c7e6ccf7c57a938943e70e690acbe5bb339d71",
+        "adapters/baseline_causal_runtime.py": "9d7079f5422f40187413b6047275646d3f5fb5ada90158d8da4eb73dda7685d6",
+        "scripts/check_baseline_causal.py": "b0d06db329ea18c27b7cc1121aa1690538ca10ed1fac5d73569313e1959cdd97",
+        "scripts/activate-causal-baseline.sh": "3c14caac9b4bb63fd2710702a21c8e447e448581945d7991078141839fa46e58"
+      },
+      "scope": "data-only",
+      "wall_seconds": 6.116277694702148
+    },
+    "baku": {
+      "passed": true,
+      "method": "baku",
+      "training_updates": 0,
+      "data_only": true,
+      "raw_data_windows_checked": 200,
+      "eligible_training_anchors": 6156,
+      "endpoint_padding": "unchanged author zero command padding",
+      "original_pkls_verified": true,
+      "source_sha256": {
+        "adapters/baku_causal.py": "47c352f3d11faf0f7ff1087ed5b9efe968f6728a9a253fa7b664c6af3867f84a",
+        "adapters/baku_live.py": "9b6662bc522decb2e923ff2d8b500aa34e8d3109bdd519201a0738b5d4e8fdaf",
+        "experiments/baku_run.py": "a4da829b989bfe53fc58667bcdf342d0ec79a3fcdecac2f0c34410b6905ad1f2",
+        "third_party/BAKU/baku/read_data/libero.py": "a296e065f4df5b7e864b0c908ea33efceeb3e03928974d433e018dfbfd6595bb",
+        "adapters/libero_causal_contract.py": "e646a7e7cb29d89f6203c210a9c7e6ccf7c57a938943e70e690acbe5bb339d71",
+        "adapters/baseline_causal_runtime.py": "9d7079f5422f40187413b6047275646d3f5fb5ada90158d8da4eb73dda7685d6",
+        "scripts/check_baseline_causal.py": "b0d06db329ea18c27b7cc1121aa1690538ca10ed1fac5d73569313e1959cdd97",
+        "scripts/activate-causal-baseline.sh": "3c14caac9b4bb63fd2710702a21c8e447e448581945d7991078141839fa46e58"
+      },
+      "scope": "data-only",
+      "wall_seconds": 69.56257653236389
+    }
+  },
+  "a2a_data_check": null,
+  "cpu_completion": null,
+  "dp_gpu_smoke": null
+}

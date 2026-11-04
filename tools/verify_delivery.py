@@ -5,6 +5,9 @@ R=Path(__file__).resolve().parents[1]
 def read(p):return json.loads((R/p).read_text())
 def verify():
  runs=read('results/runs.json')['runs'];checks=[];total=0
+ split=read('configs/act/split.json')
+ assert len(split['train'])==40 and len(split['validation'])==10
+ assert not set(split['train'])&set(split['validation'])
  csv_rows=list(csv.DictReader((R/'results/summary.csv').open()))
  assert len(csv_rows)==len(runs)
  for row,tab in zip(runs,csv_rows):
@@ -26,6 +29,8 @@ def verify():
     a=action['action'] if isinstance(action,dict) else action
     assert len(a)==7 and all(math.isfinite(x) and -1<=x<=1 for x in a)
   config=report['config']
+  assert report['checkpoint_training_step']==row['updates']==config['updates']
+  assert config['dataset_sha256']==split['dataset_sha256']
   assert config['sample_contract']==('libero-same-index-v0' if row['condition']=='timing_ablation_control' else 'libero-poststep-next-command-v1')
   assert config['settle_steps']==10
   if row['condition']=='diagnostic_open_warmup':assert report['evaluation_protocol']['settle_gripper_command']==-1
