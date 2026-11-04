@@ -9,12 +9,18 @@ from PIL import Image
 from adapters.dp_model import build_dp,load_dp_state,assert_dp_placement
 from adapters.baseline_causal_runtime import record_run
 from experiments.dp_run import live_obs
+from tools.prepare_runtime import prepare
 assert os.environ.get('SLURM_JOB_ID') and torch.cuda.is_available()
 job=os.environ['SLURM_JOB_ID'];out=ROOT/'artifacts/release-dp-smoke'/job;out.mkdir(parents=True,exist_ok=True)
 report=dict(passed=False,job=job,training_updates=0,scope='Frozen-model packaged inference and10simulatoractions; not a benchmark score')
 env=None;start=time.time()
 try:
- c=json.loads((ROOT/'configs/baselines_causal/dp_seed0.json').read_text());record_run('dp',out,c,training=False)
+ prepare()
+ manifest=json.loads((ROOT/'configs/baselines_causal/manifest_2026-10-27.json').read_text())
+ os.environ.setdefault('CAUSAL_GATE_JOB',manifest['methods']['dp']['gate_job'])
+ c=json.loads((ROOT/'configs/baselines_causal/dp_seed0.json').read_text())
+ record_run('dp',out,c,training=False)
+ report['causal_gate_job']=os.environ['CAUSAL_GATE_JOB']
  row=next(r for r in json.loads((ROOT/'results/runs.json').read_text())['runs'] if r['method']=='dp' and r['seed']==0 and r['setting']=='execute5')
  h=hashlib.sha256()
  with Path(row['checkpoint']).open('rb') as f:
@@ -43,6 +49,9 @@ try:
  frames[0].save(out/'smoke.gif',save_all=True,append_images=frames[1:],duration=250,loop=0)
  (out/'actions.json').write_text(json.dumps(actions))
  report.update(passed=True,simulator_actions=len(actions),policy_calls=call+1,gpu=torch.cuda.get_device_name(0),checkpoint_sha256=h.hexdigest(),frame_shape=list(obs['agentview_image'].shape),checkpoint_step=3000)
+except Exception as exc:
+ report['error']=repr(exc)
+ raise
 finally:
  if env is not None:env.close()
  report['wall_seconds']=time.time()-start

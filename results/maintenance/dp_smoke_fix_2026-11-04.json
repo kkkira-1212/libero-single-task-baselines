@@ -1,0 +1,14 @@
+{
+  "failed_job": "15039257",
+  "root_cause": "Missing CAUSAL_GATE_JOB in the new supplemental smoke entry point; provenance guard stopped execution before model loading",
+  "fix": "Read the recorded DP gate from the baseline manifest by default; prepare runtime files; retain source verification; capture future exception details",
+  "direct_guard_check": {
+    "passed": true,
+    "gate_job": "14497123",
+    "source_files": 7,
+    "training_updates": 0
+  },
+  "retry_job": "15058569",
+  "retry_state_at_record": "SUBMITTED",
+  "historical_results_affected": false
+}

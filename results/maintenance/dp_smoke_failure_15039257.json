@@ -1,0 +1,7 @@
+{
+  "passed": false,
+  "job": "15039257",
+  "training_updates": 0,
+  "scope": "Frozen-model packaged inference and10simulatoractions; not a benchmark score",
+  "wall_seconds": 0.003144979476928711
+}
