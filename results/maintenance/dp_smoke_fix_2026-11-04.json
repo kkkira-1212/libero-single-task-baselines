@@ -9,6 +9,8 @@
     "training_updates": 0
   },
   "retry_job": "15058569",
-  "retry_state_at_record": "SUBMITTED",
-  "historical_results_affected": false
+  "retry_state_at_record": "COMPLETED",
+  "historical_results_affected": false,
+  "retry_passed": true,
+  "retry_evidence": "results/maintenance/dp_smoke_15058569/result.json"
 }

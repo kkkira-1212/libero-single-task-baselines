@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "job": "15058569",
+  "training_updates": 0,
+  "scope": "Frozen-model packaged inference and10simulatoractions; not a benchmark score",
+  "causal_gate_job": "14497123",
+  "simulator_actions": 10,
+  "policy_calls": 2,
+  "gpu": "Quadro RTX 6000",
+  "checkpoint_sha256": "2dddd8cc689e9c7d351d22242dc9c5e00b64980f5fcb8ca2b7a457eef1f3afbe",
+  "frame_shape": [
+    128,
+    128,
+    3
+  ],
+  "checkpoint_step": 3000,
+  "wall_seconds": 309.3154697418213
+}
